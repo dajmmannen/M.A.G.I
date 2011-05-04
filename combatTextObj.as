@@ -11,7 +11,7 @@
 		
 		
 		public function combatTextObj(startX:Number, startY:Number, damageNumber:Number) {
-			
+			self = this;
 			addEventListener(Event.ENTER_FRAME, frameUpdater)
 			
 			function frameUpdater(e) {
@@ -20,7 +20,7 @@
 				alpha -= 0,01
 				
 				if(alpha==0) {
-					x=13371337
+					gameEngine(parent).removeChild(self)
 				}
 			}
 			
